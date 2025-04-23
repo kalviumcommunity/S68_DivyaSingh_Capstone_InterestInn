@@ -69,3 +69,5 @@ DAY 6: Initialized a backend server and implemented authentication for username 
 
 DAY 7: Implented JWT Authorization in the application.
 
+DAY 8: Implemented file upload functionality using multer and cloudinary.
+

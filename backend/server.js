@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 
 const authRoutes = require("./src/routes/authRoutes");
+const uploadRoutes = require('./src/routes/uploadRoutes');
 
 dotenv.config();
 const app = express();
@@ -16,6 +17,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error(err));
   
 app.use("/api/auth",authRoutes);
+app.use('/api/upload', uploadRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

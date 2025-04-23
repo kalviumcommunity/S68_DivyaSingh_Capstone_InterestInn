@@ -67,3 +67,5 @@ DAY 5: Established relation between different database entities.
 
 DAY 6: Initialized a backend server and implemented authentication for username and password in the application.
 
+DAY 7: Implented JWT Authorization in the application.
+

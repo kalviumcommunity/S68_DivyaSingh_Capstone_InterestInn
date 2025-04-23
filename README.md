@@ -63,3 +63,5 @@ DAY 3: Initialized the Git repository with all the necessary information in the 
 
 DAY 4: Created mongoose Schemas for different entities required in the project.
 
+DAY 5: Established relation between different database entities.
+

@@ -4,7 +4,9 @@ const productSchema = new mongoose.Schema({
     title: String,
     description: String,
     price: Number,
-    image: String, 
+    image: String,
+    creator: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }, 
+    category: String,
     createdAt: { type: Date, default: Date.now }
   });
 

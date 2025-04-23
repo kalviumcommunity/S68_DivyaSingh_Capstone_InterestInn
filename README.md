@@ -65,3 +65,5 @@ DAY 4: Created mongoose Schemas for different entities required in the project.
 
 DAY 5: Established relation between different database entities.
 
+DAY 6: Initialized a backend server and implemented authentication for username and password in the application.
+

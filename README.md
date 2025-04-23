@@ -61,3 +61,5 @@ DAY 2: Created a high fidelity design for the whole project.
 
 DAY 3: Initialized the Git repository with all the necessary information in the README.md file.
 
+DAY 4: Created mongoose Schemas for different entities required in the project.
+

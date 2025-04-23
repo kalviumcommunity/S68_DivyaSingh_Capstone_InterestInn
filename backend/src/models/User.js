@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-    username: { type: String, unique: true },
-    email: { type: String, unique: true },
+    username: { type: String, unique: true, required: true},
+    email: { type: String, unique: true, required:true },
     password: String,
     role: { type: String, enum: ["member", "creator"], default: "member" },
     googleId: String,
@@ -12,4 +12,4 @@ const userSchema = new mongoose.Schema({
     discussions: [{ type: mongoose.Schema.Types.ObjectId, ref: "Discussion" }]
   });
 
-  module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("User", userSchema);

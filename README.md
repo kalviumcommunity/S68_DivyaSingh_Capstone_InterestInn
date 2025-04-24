@@ -6,6 +6,7 @@
 
 **[GitHub Repository](https://github.com/kalviumcommunity/S68_DivyaSingh_Capstone_InterestInn)** |
 **[Low Fidelity Figma Design](https://www.figma.com/design/0UQNOXfDOP8AQkMKsQAxeu/Low-Fidelity-Design?node-id=0-1&t=sWzrKxhw3Ha4wcQJ-1)** |
+**[Backend Deployment](https://s68-divyasingh-capstone-interestinn.onrender.com)**
 
 ---
 
@@ -70,4 +71,6 @@ DAY 6: Initialized a backend server and implemented authentication for username 
 DAY 7: Implented JWT Authorization in the application.
 
 DAY 8: Implemented file upload functionality using multer and cloudinary.
+
+DAY 9: Deployed the backend server on render.
 

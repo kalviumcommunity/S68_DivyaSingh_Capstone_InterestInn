@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const storySchema = new mongoose.Schema({
     title: String,
     content: String,
-    images: [String],
     author: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }, 
     likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }], 
     comments: [{

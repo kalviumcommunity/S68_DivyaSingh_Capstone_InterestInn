@@ -5,6 +5,10 @@ const cors = require("cors");
 
 const authRoutes = require("./src/routes/authRoutes");
 const uploadRoutes = require('./src/routes/uploadRoutes');
+const noteRoutes = require('./src/routes/noteRoutes');
+const storyRoutes = require('./src/routes/storyRoutes');
+const discussionRoutes = require('./src/routes/discussionRoutes');
+const productRoutes = require('./src/routes/productRoutes');
 
 dotenv.config();
 const app = express();
@@ -18,6 +22,10 @@ mongoose.connect(process.env.MONGO_URI)
   
 app.use("/api/auth",authRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/notes', noteRoutes);
+app.use('/api/stories', storyRoutes); 
+app.use('/api/discussions', discussionRoutes);
+app.use('/api/products', productRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

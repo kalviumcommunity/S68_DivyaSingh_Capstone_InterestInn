@@ -1,13 +1,13 @@
 const Discussion = require('../models/Discussion');
 
-// exports.getAllDiscussions = async (req, res) => {
-//   try {
-//     const discussions = await Discussion.find();
-//     res.json({ status: 'success', data: discussions });
-//   } catch (err) {
-//     res.status(500).json({ status: 'error', error: err.message });
-//   }
-// };
+exports.getAllDiscussions = async (req, res) => {
+  try {
+    const discussions = await Discussion.find();
+    res.json({ status: 'success', data: discussions });
+  } catch (err) {
+    res.status(500).json({ status: 'error', error: err.message });
+  }
+};
 
 exports.createDiscussion = async (req, res) => {
   try {
@@ -18,17 +18,17 @@ exports.createDiscussion = async (req, res) => {
   }
 };
 
-// exports.getDiscussion = async (req, res) => {
-//   try {
-//     const discussion = await Discussion.findById(req.params.id);
-//     if (!discussion) {
-//       return res.status(404).json({ status: 'fail', error: 'Discussion not found' });
-//     }
-//     res.json({ status: 'success', data: discussion });
-//   } catch (err) {
-//     res.status(500).json({ status: 'error', error: err.message });
-//   }
-// };
+exports.getDiscussion = async (req, res) => {
+  try {
+    const discussion = await Discussion.findById(req.params.id);
+    if (!discussion) {
+      return res.status(404).json({ status: 'fail', error: 'Discussion not found' });
+    }
+    res.json({ status: 'success', data: discussion });
+  } catch (err) {
+    res.status(500).json({ status: 'error', error: err.message });
+  }
+};
 
 // exports.updateDiscussion = async (req, res) => {
 //   try {

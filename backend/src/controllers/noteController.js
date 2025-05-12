@@ -1,13 +1,13 @@
 const Note = require('../models/Note');
 
-// exports.getAllNotes = async (req, res) => {
-//   try {
-//     const notes = await Note.find();
-//     res.json({ status: 'success', data: notes });
-//   } catch (err) {
-//     res.status(500).json({ status: 'error', error: err.message });
-//   }
-// };
+exports.getAllNotes = async (req, res) => {
+  try {
+    const notes = await Note.find();
+    res.json({ status: 'success', data: notes });
+  } catch (err) {
+    res.status(500).json({ status: 'error', error: err.message });
+  }
+};
 
 exports.createNote = async (req, res) => {
   try {
@@ -18,17 +18,17 @@ exports.createNote = async (req, res) => {
   }
 };
 
-// exports.getNote = async (req, res) => {
-//   try {
-//     const note = await Note.findById(req.params.id);
-//     if (!note) {
-//       return res.status(404).json({ status: 'fail', error: 'Note not found' });
-//     }
-//     res.json({ status: 'success', data: note });
-//   } catch (err) {
-//     res.status(500).json({ status: 'error', error: err.message });
-//   }
-// };
+exports.getNote = async (req, res) => {
+  try {
+    const note = await Note.findById(req.params.id);
+    if (!note) {
+      return res.status(404).json({ status: 'fail', error: 'Note not found' });
+    }
+    res.json({ status: 'success', data: note });
+  } catch (err) {
+    res.status(500).json({ status: 'error', error: err.message });
+  }
+};
 
 // exports.updateNote = async (req, res) => {
 //   try {

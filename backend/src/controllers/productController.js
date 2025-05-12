@@ -1,13 +1,13 @@
 const Product = require('../models/Product');
 
-// exports.getAllProducts = async (req, res) => {
-//   try {
-//     const products = await Product.find();
-//     res.json({ status: 'success', data: products });
-//   } catch (err) {
-//     res.status(500).json({ status: 'error', error: err.message });
-//   }
-// };
+exports.getAllProducts = async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json({ status: 'success', data: products });
+  } catch (err) {
+    res.status(500).json({ status: 'error', error: err.message });
+  }
+};
 
 exports.createProduct = async (req, res) => {
   try {
@@ -18,17 +18,17 @@ exports.createProduct = async (req, res) => {
   }
 };
 
-// exports.getProduct = async (req, res) => {
-//   try {
-//     const product = await Product.findById(req.params.id);
-//     if (!product) {
-//       return res.status(404).json({ status: 'fail', error: 'Product not found' });
-//     }
-//     res.json({ status: 'success', data: product });
-//   } catch (err) {
-//     res.status(500).json({ status: 'error', error: err.message });
-//   }
-// };
+exports.getProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) {
+      return res.status(404).json({ status: 'fail', error: 'Product not found' });
+    }
+    res.json({ status: 'success', data: product });
+  } catch (err) {
+    res.status(500).json({ status: 'error', error: err.message });
+  }
+};
 
 // exports.updateProduct = async (req, res) => {
 //   try {

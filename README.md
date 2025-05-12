@@ -77,3 +77,5 @@ DAY 9: Deployed the backend server on render.
 DAY 10: Initialised the frontend in my application using React.
 
 DAY 11: Created POST request for different entities present.
+
+DAY 12: Created GET request for different entities present
